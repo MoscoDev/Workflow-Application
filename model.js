@@ -44,6 +44,9 @@ const postSchema = new mongoose.Schema({
       ref: "Comment",
     },
   ],
+  approved: {
+    type: {String,enum:["Approved", "Not Approved"], default: "Approved" }
+  }
 });
 
 const commentSchema = new mongoose.Schema({
